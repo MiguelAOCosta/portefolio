@@ -7,23 +7,32 @@
     <title>Miguel Costa | Designer Gráfico & Web Portfolio</title>
     <meta name="description"
         content="Conheça os projetos de Miguel Costa, especialista em design gráfico e web. Transformando ideias em experiências digitais de alto impacto." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div>
-            <p>Miguel Costa</p>
+        <div class="container header-container">
+            <a href="#" class="logo">Miguel Costa</a>
 
-            <nav>
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Trabalho</a></li>
-                    <li><a href="#">Percurso</a></li>
-                    <li><a href="#">Contacto</a></li>
+            <nav class="nav-container">
+                <ul class="nav-content">
+                    <li class="nav-link"><a href="#about">Sobre</a></li>
+                    <li class="nav-link"><a href="#work">Trabalho</a></li>
+                    <li class="nav-link"><a href="#route">Percurso</a></li>
+                    <li class="nav-link"><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
 
-            <button>
+            <button class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -46,7 +55,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="about">
             <div>
                 <div>
                     <img src="assets/perfil.jpg" alt="Desenhando ideias para construir sites.">
@@ -112,7 +121,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="work">
             <div>
                 <h2>Projetos Selecionados</h2>
                 <p>Trabalho recente (2026 — 2026)</p>
@@ -201,7 +210,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="route">
             <div>
                 <h2>O meu percurso</h2>
                 <p>Os lugares onde afiei as minhas ferramentas.</p>
@@ -244,7 +253,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="contact">
             <div>
                 <p>PRÓXIMO PASSO</p>
                 <h2>Tens um projeto em mente? <span>Vamos conversar.</span></h2>

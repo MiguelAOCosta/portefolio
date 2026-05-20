@@ -1,0 +1,139 @@
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(245, 241, 235, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--texto-escuro);
+  font-style: italic;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  z-index: 999;
+}
+
+.nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--border);
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+  z-index: 990;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 4rem 2rem;
+}
+
+.nav-link {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.nav-link a {
+  color: var(--texto-escuro);
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link a:hover {
+  color: var(--terracota-primaria);
+}
+
+.nav-container.open .nav-link {
+  animation: dropLink 0.5s ease forwards;
+}
+
+@keyframes dropLink {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--texto-escuro);
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger span:nth-of-type(1) {
+  width: 85%;
+}
+
+.hamburger span:nth-of-type(2) {
+  width: 50%;
+}
+
+.hamburger:hover span {
+  width: 100%;
+}
+
+.hamburger.open span:nth-of-type(1) {
+  width: 100%;
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.hamburger.open span:nth-of-type(2) {
+  width: 0;
+}
+
+.hamburger.open span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(5px, -4px);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    position: relative;
+    max-height: 100%;
+    background-color: transparent;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    z-index: auto;
+  }
+
+  .nav-content {
+    width: max-content;
+    flex-direction: row;
+    padding-block: 0;
+  }
+
+  .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

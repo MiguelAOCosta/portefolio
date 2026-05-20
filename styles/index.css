@@ -1,0 +1,74 @@
+@import url("header.css");
+
+:root {
+  /* Fontes */
+  --font-titulo: "Lora", serif;
+  --font-corpo: "Outfit", sans-serif;
+
+  /* Cores */
+  --fundo-creme: #f5f1eb;
+  --texto-escuro: #2d2b2a;
+  --texto-secundario: #696663;
+  --terracota-primaria: #c75640;
+  --salvia-secundaria: #989985;
+  --card: #f8f6f1;
+  --border: #d5cfc3;
+  --muted: #e8e5de;
+
+  /* Dark cores */
+  --dark-fundo: #1b1a18;
+  --dark-texto: #f5f1eb;
+  --dark-texto-secundario: #c0b7a5;
+  --dark-terracota: #df7b68;
+  --dark-salvia: #7a7b65;
+  --dark-card: #201f1d;
+  --dark-border: #363330;
+  --dark-muted: #2e2b29;
+}
+
+::selection {
+  background-color: var(--dark-terracota); /* Cor de fundo */
+  color: var(--dark-texto); /* Cor do texto */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-corpo);
+  color: var(--texto-escuro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: var(--font-titulo);
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
