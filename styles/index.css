@@ -1,5 +1,6 @@
 @import url("header.css");
 @import url("hero.css");
+@import url("about.css");
 
 :root {
   /* Fontes */
@@ -75,7 +76,7 @@ ul {
 }
 
 section {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
 }
 
 .info-text {
@@ -89,12 +90,16 @@ section {
   color: var(--terracota-primaria);
 }
 
+.title-slavia {
+  color: var(--salvia-secundaria);
+}
+
 .sm-description {
   color: var(--texto-secundario);
   font-size: 1.3rem;
   font-weight: 200;
   line-height: 2rem;
-  padding-block: 3rem;
+  padding-bottom: 3rem;
 }
 
 .btn {
@@ -120,4 +125,30 @@ section {
   align-items: center;
   gap: 0.5rem;
   transition: color 0.2s ease-in-out;
+}
+
+.title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.text {
+  color: var(--texto-secundario);
+  font-size: 1.15rem;
+  font-weight: 100;
+  line-height: 1.7rem;
+}
+
+.title-card {
+  font-size: 1.3rem;
+  padding-block: 1.5rem;
+  font-weight: 400;
+}
+
+.text-card {
+  color: var(--texto-secundario);
+  font-size: 1.05rem;
+  font-weight: 100;
+  line-height: 1.5rem;
 }
