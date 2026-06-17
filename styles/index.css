@@ -1,6 +1,7 @@
 @import url("header.css");
 @import url("hero.css");
 @import url("about.css");
+@import url("work.css");
 
 :root {
   /* Fontes */
@@ -72,6 +73,7 @@ ul {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -80,10 +82,23 @@ section {
 }
 
 .info-text {
+  position: relative;
   color: var(--terracota-primaria);
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 1.5px;
+}
+
+.info-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1.1rem;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--dark-texto-secundario);
+  border-radius: 50%;
 }
 
 .title-terracota {
@@ -97,14 +112,14 @@ section {
 .sm-description {
   color: var(--texto-secundario);
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 2rem;
   padding-bottom: 3rem;
 }
 
 .btn {
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 300;
   color: var(--dark-texto);
   padding: 2rem 3rem;
   border-radius: 50px;
@@ -136,7 +151,7 @@ section {
 .text {
   color: var(--texto-secundario);
   font-size: 1.15rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.7rem;
 }
 
@@ -149,6 +164,6 @@ section {
 .text-card {
   color: var(--texto-secundario);
   font-size: 1.05rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.5rem;
 }

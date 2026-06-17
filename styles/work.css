@@ -1,0 +1,95 @@
+.work-container {
+  background-color: var(--card);
+}
+
+.work-container ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.work-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.work-content-img {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 25px var(--salvia-secundaria);
+}
+
+.work-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.work-content:hover .work-content-img img {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+.work-content-text p span:nth-of-type(2) {
+  color: var(--texto-secundario);
+  padding-left: 2rem;
+  font-size: 0.8rem;
+}
+
+.work-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 400;
+  margin-block: 1.5rem;
+}
+
+.work-description {
+  color: var(--texto-secundario);
+  font-weight: 300;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lang-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.lang {
+  border: 1px solid var(--salvia-secundaria);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  color: var(--texto-escuro);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.work-link {
+  color: var(--texto-escuro);
+  text-decoration: underline;
+  font-weight: 300;
+  text-underline-offset: 8px;
+  transition: color 0.2s ease-in-out;
+}
+
+.work-link:hover {
+  color: var(--terracota-primaria);
+}
+
+@media screen and (min-width: 972px) {
+  .work-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work-content:nth-child(even) .work-content-img {
+    order: 2;
+  }
+
+  .work-content:nth-child(even) .work-content-text {
+    order: 1;
+  }
+}
