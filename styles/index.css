@@ -2,6 +2,7 @@
 @import url("hero.css");
 @import url("about.css");
 @import url("work.css");
+@import url("route.css");
 
 :root {
   /* Fontes */
@@ -82,23 +83,10 @@ section {
 }
 
 .info-text {
-  position: relative;
   color: var(--terracota-primaria);
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 1.5px;
-}
-
-.info-text::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -1.1rem;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
-  background-color: var(--dark-texto-secundario);
-  border-radius: 50%;
 }
 
 .title-terracota {
