@@ -155,3 +155,35 @@ section {
   font-weight: 300;
   line-height: 1.5rem;
 }
+
+.animation {
+  background-color: var(--texto-escuro);
+  padding-block: 3rem;
+  color: var(--texto-secundario);
+  font-family: var(--font-titulo);
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animation ul {
+  list-style: disc;
+  display: flex;
+  gap: 10rem;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animation ul li::marker {
+  color: var(--terracota-primaria);
+}
