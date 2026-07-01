@@ -4,6 +4,7 @@
 @import url("work.css");
 @import url("route.css");
 @import url("contact.css");
+@import url("footer.css");
 
 :root {
   /* Fontes */
@@ -79,7 +80,8 @@ ul {
   margin: 0 auto;
 }
 
-section {
+section,
+footer {
   padding: 5rem 1.5rem;
 }
 
