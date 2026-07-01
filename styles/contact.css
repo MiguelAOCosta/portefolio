@@ -42,6 +42,7 @@ form div {
 
 .form-input {
   padding: 1rem;
+  font-size: 0.9rem;
   background-color: var(--muted);
   border: 1px solid var(--salvia-secundaria);
   border-radius: 5px;
