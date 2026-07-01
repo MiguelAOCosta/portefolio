@@ -1,4 +1,5 @@
 .contact-container {
+  overflow: hidden;
   background-color: var(--card);
   position: relative;
   text-align: center;
